@@ -1,0 +1,9 @@
+.image{
+    margin: 5px;
+}
+
+.image[disabled]
+{
+    cursor: not-allowed;
+    opacity:0.5;
+}

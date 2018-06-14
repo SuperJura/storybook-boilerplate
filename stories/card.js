@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 /* eslint-enable */
 import Card from '../components/card';
-import beers from './beers.json'
+import beers from '../static/beers.json'
 
 const cardStory = storiesOf('Card', module);
 
@@ -19,7 +19,7 @@ cardStory.add('double', () => (
     </div>
 ));
 
-cardStory.add('all bears', () => {
+cardStory.add('all beers', () => {
     const cards = beers.map(beer => 
         <Card 
             key={beer.id}

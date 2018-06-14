@@ -1,0 +1,12 @@
+.hyperlinkButton
+{
+    display: inline-block;
+    
+    text-align: center;
+}
+
+.hyperlinkButton_image
+{
+    max-width: 100px;
+    max-height: 100px;
+}

@@ -8,7 +8,7 @@ export default class Card extends React.Component
     {
         return (
             <div className={styles.card}>
-                <img src={this.props.imgUrl} style={{maxWidth:'200px', maxHeight:'200px'}}/>
+                <img src={this.props.imgUrl} className={styles.card_image}/>
                 <div className={styles.container}>
                     <h4>{this.props.name}</h4>
                     <p>{this.props.tagline}</p>
