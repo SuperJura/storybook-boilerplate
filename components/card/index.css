@@ -5,6 +5,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 5px;
     text-align: center;
+    border-radius: 1em;
 }
 
 .container{
@@ -18,4 +19,21 @@
     height:180px;
     width:235px;
     object-fit: contain;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.card_star
+{
+    float: left;
+}
+
+.card_actions
+{
+    float:right;
+}
+
+.card_clearFloat
+{
+    clear: both;
 }

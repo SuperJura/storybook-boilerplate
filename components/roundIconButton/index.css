@@ -1,5 +1,7 @@
 .image{
     margin: 5px;
+    max-width: 1.5em;
+    max-height: 1.5em;
 }
 
 .image[disabled]

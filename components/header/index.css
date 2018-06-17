@@ -1,0 +1,26 @@
+.header_header
+{
+    width: 75%;
+    height: 15em;
+    background-color: aqua;
+    vertical-align: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    display:table;
+    border-radius: 3em;
+}
+
+.header_title
+{
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 5em;
+}
+
+.header_logo
+{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 0.25em;
+}
