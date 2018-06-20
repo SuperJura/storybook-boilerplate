@@ -6,6 +6,8 @@
     margin: 5px;
     text-align: center;
     border-radius: 1em;
+    
+    overflow: visible;
 }
 
 .container{

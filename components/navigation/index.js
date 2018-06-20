@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import styles from './index.css'
 
 export default class Navigation extends React.Component
 {
@@ -12,18 +13,22 @@ export default class Navigation extends React.Component
         }
         else
         {
-            return <div>No links</div>
+            return <span className = {styles.navigation}>No links</span>
         }
     }
 
     getDivWithLinks(allLinks)
     {
         return (
-            <div>
+            <ul className = {styles.navigation}>
                 {
-                    allLinks.map((link) => <Link href="a" to={link.link} >{link.title}</Link>)
+                    allLinks.map((link) => (
+                    <li>
+                        <Link href="a" to={link.link} >{link.title}</Link> 
+                    </li>
+                    ))
                 }
-            </div>
+            </ul>
         )        
     }
 }

@@ -6,7 +6,9 @@ function loadStories() {
   require('../stories/hyperlinkButton.js');
   require('../stories/card.js');
   require('../stories/header.js');
-  require('../stories/navigation.js')
+  require('../stories/navigation.js');
+  require('../stories/mainContent.js');
+  require('../stories/footer.js');
 }
 
 configure(loadStories, module);

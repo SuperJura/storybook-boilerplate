@@ -8,15 +8,12 @@ import beers from '../static/beers.json'
 
 const cardStory = storiesOf('Card', module);
 
-cardStory.add('simple', () => (
+cardStory.add('not favourite beer', () => (
   <Card imgUrl="https://images.punkapi.com/v2/keg.png" name="Piiivo" tagline="A Real Bitter Experience."></Card>
 ));
 
-cardStory.add('double', () => (
-    <div>
-        <Card imgUrl="https://images.punkapi.com/v2/keg.png" name="Piiivo" tagline="A Real Bitter Experience."></Card>
-        <Card imgUrl="https://images.punkapi.com/v2/keg.png" name="Piiivo" tagline="A Real Bitter Experience."></Card>
-    </div>
+cardStory.add('favourite beer', () => (
+    <Card imgUrl="https://images.punkapi.com/v2/keg.png" isFavourite="true" name="Piiivo" tagline="A Real Bitter Experience."></Card>
 ));
 
 cardStory.add('all beers', () => {

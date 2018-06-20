@@ -1,0 +1,12 @@
+.mainContent
+{
+    background-color: rgba(10, 222, 255, 0.2);
+    width: 70%;
+    margin: 5px auto 5px auto;
+    border-radius: 1em;
+}
+
+.children
+{
+    text-align: center;
+}

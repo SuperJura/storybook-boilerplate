@@ -5,13 +5,19 @@ import RoundIconButton from '../roundIconButton'
 
 export default class Card extends React.Component
 {
+    getFavouriteIcon(favouriteStatus)
+    {
+        if(favouriteStatus !== undefined && favouriteStatus === "true") return "starFull"
+        else return "starEmpty"
+    }
+
     render()
     {
         return (
             <div className={styles.card}>
                 <img src={this.props.imgUrl} className={styles.card_image}/>
                 <span className={styles.card_star}>
-                    <RoundIconButton type="starEmpty"/>
+                    <RoundIconButton type={this.getFavouriteIcon(this.props.isFavourite)}/>
                 </span>
                 <span className={styles.card_actions}>
                     <RoundIconButton type="info"/>
@@ -26,6 +32,7 @@ export default class Card extends React.Component
             </div>
         )
     }
+
 }
 
 Card.PropTypes = {

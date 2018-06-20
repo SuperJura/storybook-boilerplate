@@ -10,3 +10,11 @@ const headerStory = storiesOf('Header', module);
 headerStory.add('with title', () => (
   <Header title='Hello World!'></Header>
 ));
+
+headerStory.add('with image', () => (
+  <Header showLogo="true"></Header>
+));
+
+headerStory.add('with image and title', () => (
+  <Header showLogo="true" title="Hello World!"></Header>
+));
