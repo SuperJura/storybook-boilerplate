@@ -7,6 +7,9 @@ import Header from '../components/header'
 import MainContent from '../components/mainContent';
 import Card from '../components/card';
 import beers from '../static/beers.json'
+import Navigation from '../components/navigation';
+import Footer from '../components/footer'
+import { BrowserRouter } from 'react-router-dom'
 
 const contentStory = storiesOf('Main Content', module);
 
@@ -40,5 +43,45 @@ contentStory.add('main content with content', () =>{
     <MainContent>
         {cards}    
     </MainContent>
+    )
+});
+
+contentStory.add("All", () =>{
+    const cards = beers.map(beer => 
+        <Card 
+            key={beer.id}
+            imgUrl={beer.image_url} 
+            name={beer.name} 
+            tagline={beer.tagline}>
+        </Card>
+    )    
+    
+    return (
+    <div>
+        <Header title="Hello World" showLogo="true"></Header>
+        
+        <BrowserRouter>
+            <Navigation
+            links =
+            {
+                [
+                    {
+                        link: "1",
+                        title: "Link 1"
+                    },
+                    {
+                        link: "A",
+                        title: "Link A"
+                    },
+                ]
+            }>
+            </Navigation>
+        </BrowserRouter>
+        
+        <MainContent>
+            {cards}    
+        </MainContent>
+        <Footer>Footer</Footer>
+    </div>
     )
 })
