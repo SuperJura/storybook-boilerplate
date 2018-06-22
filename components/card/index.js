@@ -17,11 +17,11 @@ export default class Card extends React.Component
             <div className={styles.card}>
                 <img src={this.props.imgUrl} className={styles.card_image}/>
                 <span className={styles.card_star}>
-                    <RoundIconButton type={this.getFavouriteIcon(this.props.isFavourite)}/>
+                    <RoundIconButton type={this.getFavouriteIcon(this.props.isFavourite)} onClick={this.props.onFavourite}/>
                 </span>
                 <span className={styles.card_actions}>
-                    <RoundIconButton type="info"/>
-                    <RoundIconButton type="plus"/>
+                    <RoundIconButton type="info" onClick={this.props.onInfo}/>
+                    <RoundIconButton type="plus" onClick={this.props.onPlus}/>
                 </span>
                 <div className={styles.card_clearFloat}/>
                 
