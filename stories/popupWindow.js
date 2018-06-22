@@ -20,18 +20,11 @@ windowStory.add('shown window', () => (
 ));
 
 windowStory.add('hidden window', () => (
-	<PopupWindow hidden>
-		<div>
-			<span>
-				Hello World
-			</span>
-		</div>
-	</PopupWindow>
+	<div></div>
 ));
 
-windowStory.add('show on button click', () => {
-
-	const window = <PopupWindow tooltip='Hello World!' hidden debug>
+windowStory.add('popup with close handler', () => {
+	const window = <PopupWindow tooltip='Hello World!' onClose={action("close popup")}>
 		<div>
 			<span>
 				Hello World
@@ -48,7 +41,6 @@ windowStory.add('show on button click', () => {
 });
 
 windowStory.add('shown window with content', () => {
-
     const cards = beers.map(beer => 
         <Card 
             key={beer.id}
