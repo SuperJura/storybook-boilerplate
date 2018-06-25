@@ -5,7 +5,7 @@
   cursor: pointer;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: rgb(76, 135, 175);
   border: none;
   border-radius: 15px;
 }
@@ -16,10 +16,17 @@
 }
 
 .button:hover {
-  background-color: #3e8e41
+  background-color: rgb(76, 99, 175);
 }
 
 .button:active {
-  background-color: #3e8e41;
-  transform: translateY(4px);
+  background-color: rgb(76, 99, 175);
+  transform: scale(0.8);
+}
+
+.small{
+  transform: scale(0.7);
+}
+.small:active{
+  transform: scale(0.6);
 }

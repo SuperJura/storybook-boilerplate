@@ -11,11 +11,14 @@ buttonStory.add('with text', () => (
   <Button>Hello World!</Button>
 ));
 
-
 buttonStory.add('disabled', () => (
   <Button disabled={true}>Can't Press me!</Button>
 ));
 
 buttonStory.add('with on click handler', () => (
   <Button onClick={action('clicked')}>Press me!</Button>
+));
+
+buttonStory.add('small with text', () => (
+  <Button isSmall>Hello World!</Button>
 ));

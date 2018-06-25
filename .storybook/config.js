@@ -10,6 +10,7 @@ function loadStories() {
   require('../stories/mainContent.js');
   require('../stories/footer.js');
   require('../stories/popupWindow.js');
+  require('../stories/table.js');
 }
 
 configure(loadStories, module);
