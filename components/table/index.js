@@ -19,15 +19,15 @@ export default class Table extends React.Component
                             {this.props.onControlClick !== undefined ? <th></th> : undefined}
                         </tr>
                         {
-                            this.props.values.map((value, index) =>(
-                                <tr key={"row" + index}>
+                            this.props.values.map((value, rowIndex) =>(
+                                <tr key={"row" + rowIndex}>
                                     {
                                         value.map((column, columnIndex) =>(
-                                            <td key={"data" + columnIndex  + " " + index}>{column}</td>
+                                            <td key={"data" + columnIndex  + " " + rowIndex}>{column}</td>
                                         ))
                                     }
                                     {
-                                        this.props.onControlClick !== undefined ? <td> <NumberPicker key={"picker" + index} onControlClick={this.props.onControlClick}/> </td>: undefined
+                                        this.props.onControlClick !== undefined ? <td> <NumberPicker key={"picker" + rowIndex} onControlClick={(amount) => {this.props.onControlClick(amount, rowIndex)}}/> </td>: undefined
                                     }
                                 </tr>
                             ))
