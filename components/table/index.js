@@ -9,28 +9,30 @@ export default class Table extends React.Component
         const table = (
             <div>
                 <table className={style.table}>
-                    <tr>
-                        {
-                            this.props.headers.map((header) =>(
-                            <th>{header}</th>
-                        ))
-                        }
-                        {this.props.onControlClick !== undefined ? <th></th> : undefined}
-                    </tr>
-                    {
-                        this.props.values.map((value) =>(
-                        <tr>
+                    <tbody>
+                        <tr key="headerRow">
                             {
-                                value.map((row) =>(
-                                    <td>{row}</td>
+                                this.props.headers.map((header, headerIndex) =>(
+                                <th key={"header" + headerIndex}>{header}</th>
                             ))
                             }
-                            {
-                                this.props.onControlClick !== undefined ? <NumberPicker onControlClick={this.props.onControlClick}/> : undefined
-                            }
+                            {this.props.onControlClick !== undefined ? <th></th> : undefined}
                         </tr>
-                    ))
-                    }
+                        {
+                            this.props.values.map((value, index) =>(
+                                <tr key={"row" + index}>
+                                    {
+                                        value.map((column, columnIndex) =>(
+                                            <td key={"data" + columnIndex  + " " + index}>{column}</td>
+                                        ))
+                                    }
+                                    {
+                                        this.props.onControlClick !== undefined ? <td> <NumberPicker key={"picker" + index} onControlClick={this.props.onControlClick}/> </td>: undefined
+                                    }
+                                </tr>
+                            ))
+                        }
+                    </tbody>
                 </table>
             </div>
         )
