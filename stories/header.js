@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 /* eslint-enable */
 import Header from '../components/header';
+import logo from '../static/duff.png'
 
 const headerStory = storiesOf('Header', module);
 
@@ -12,9 +13,9 @@ headerStory.add('with title', () => (
 ));
 
 headerStory.add('with image', () => (
-  <Header showLogo="true"></Header>
+  <Header logo={logo}></Header>
 ));
 
 headerStory.add('with image and title', () => (
-  <Header showLogo="true" title="Hello World!"></Header>
+  <Header logo={logo} title="Hello World!"></Header>
 ));

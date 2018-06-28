@@ -46,7 +46,7 @@ contentStory.add('main content with content', () =>{
     )
 });
 
-contentStory.add("All", () =>{
+contentStory.add("main content with header, navigation and footer", () =>{
     const cards = beers.map(beer => 
         <Card 
             key={beer.id}

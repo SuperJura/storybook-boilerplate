@@ -12,5 +12,5 @@ tableStory.add('with content', () => (
 ));
 
 tableStory.add('with controls', () => (
-  <Table headers={["Id", "Name", "Other Data"]} values={[["1", "Hello", "Please"], ["2", "World", "Work"]]} onControlClick={(amount, rowIndex) => console.log(amount + " " + rowIndex)}> </Table>
+  <Table headers={["Id", "Name", "Other Data"]} values={[["1", "Hello", "Please"], ["2", "World", "Work"]]} onControlClick={action()}> </Table>
 ));

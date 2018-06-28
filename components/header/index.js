@@ -1,14 +1,19 @@
 import React from 'react'
 import styles from './index.css'
-import logo from '../../static/duff.png'
 
 export default class Header extends React.Component
 {
-    getLogo(showLogo)
+    constructor(props)
     {
-        if(showLogo === "true") return(
+        super(props)
+        this.getLogo = this.getLogo.bind(this)
+    }
+
+    getLogo()
+    {
+        if(this.props.logo !== undefined) return(
             <span className={styles.header_title}>
-                <img src={logo} className={styles.header_logo}/>
+                <img src={this.props.logo} className={styles.header_logo}/>
             </span>
         )
     }
@@ -20,7 +25,7 @@ export default class Header extends React.Component
                 <span className={styles.header_title}>
                     {this.props.title}
                 </span>
-                {this.getLogo(this.props.showLogo)}
+                {this.getLogo()}
             </div>
         )
     }

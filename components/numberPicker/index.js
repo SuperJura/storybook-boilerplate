@@ -30,7 +30,7 @@ export default class NumberPicker extends React.Component
             <div>
                 {controlInput}    
                 <Button isSmall onClick={() => {
-                    this.props.onControlClick(this.state.controlValue)
+                    this.props.onControlClick(+this.state.controlValue)
                 }}>Change</Button>
             </div>
         )
